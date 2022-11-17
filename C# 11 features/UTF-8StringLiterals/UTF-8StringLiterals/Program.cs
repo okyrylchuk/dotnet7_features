@@ -3,5 +3,6 @@
 using System.Text;
 
 // byte[] array = Encoding.UTF8.GetBytes("Hello World"); // C# 10
-byte[] array = "Hello World";
+ReadOnlySpan<byte> span = "Hello World"u8;
+byte[] array = span.ToArray();
 
